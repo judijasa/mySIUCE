@@ -13,7 +13,7 @@ https://codepen.io/fainder/pen/AydHJ
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
 
 <link rel="stylesheet" type="text/css"
-href="./styles/main.css">
+href="./main.css">
 
 </head>
     
