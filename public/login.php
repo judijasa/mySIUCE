@@ -16,7 +16,7 @@ https://www.w3schools.com/php/php_form_validation.asp
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
 
 </head>
 
