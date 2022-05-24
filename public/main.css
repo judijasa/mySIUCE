@@ -1,0 +1,376 @@
+/* TO REFRESH CSS
+ 
+ https://stackoverflow.com/questions/2263096/css-file-not-refreshing-in-browser
+ 
+ https://fabricdigital.co.nz/blog/how-to-hard-refresh-your-browser-and-clear-cache
+ 
+ Open page in browser and press:
+ cmd+shift+R (mac)
+ or add new version numer in the
+ link page using GET:
+ <link [...].css?version=2">
+ 
+/*
+ ONLINE: font-awesome (icons)
+ 
+ "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+ */
+
+/* OFFLINE: font-awesome (icons) */
+
+
+@import "./font-awesome-4.7.0/css/font-awesome.min.css";
+
+/* Estilo */
+
+/*
+ CSS variables or "costum properties":
+ disabled (requires updated browsers)
+ 
+ :root {
+ --submenu-bg-color: #FA710E;
+ --active-bg-color: #1287A2;
+ }
+ */
+
+/* <!-- https://codepen.io/fainder/pen/AydHJ --> */
+
+/*
+ Color Palette used (source: colormind website)
+ {#0A3D61,#1287A2,#F1F5F3,#DDCC7D,#FA710E}
+ 
+ TO DO: Homogeneizar la paleta de colores:
+ {
+ #fff    = very light gray,
+ #d9d9d9 = light gray,
+ #ccc    = gray,
+ #4d4d4d = dark gray 1,
+ #333    = dark gray 2,
+ #555    = dark gray 3,
+ #595959 = dark gray 4
+ #444359 = dark purple 1,
+ #2d2c41 = dark purple 2,
+ #4b4a5e = bluish purple,
+ #259fba = indigo,
+ #1287A2 = dark indigo
+ #fbf9f6 = yellow cream
+ }
+ 
+ CSS variables or "costum properties":
+ disabled (requires updated browsers)
+ 
+ :root {
+ --submenu-bg-color: #FA710E;
+ --active-bg-color: #1287A2;
+ }
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2d2c41;
+    font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+/* a:active {
+ color: #b63b4d;
+ } */
+
+/* ul.a {
+ color: #b63b4d;
+ text-decoration: none;
+ } */
+
+/* (dont use html comments symbol here)
+ 
+ Accordion effect in menu:
+ https://www.jqueryscript.net/menu/Super-Smooth-Accordion-Dropdown-Menu-with-jQuery-CSS3.html
+ 
+ https://codepen.io/fainder/pen/AydHJ
+ */
+
+.accordion {
+    max-width: 360px;
+    margin: 30px auto 20px;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow:hidden; /* prevents overflow of ok/cancel buttons in repo_form */
+}
+
+.accordion .link {
+    background:#fff;
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.link {
+    width: 100%;
+}
+
+/* OPTIONAL: .link a:active {
+    color: #FA710E;
+} */
+
+.link:hover {
+    background-color: #ccc;
+}
+
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+
+/*
+ .accordion li i {
+ position: absolute;
+ top: 16px;
+ left: 12px;
+ font-size: 18px;
+ color: #595959;
+ -webkit-transition: all 0.4s ease;
+ -o-transition: all 0.4s ease;
+ transition: all 0.4s ease;
+ }
+ */
+
+.accordion li.open .link {
+    color:#FA710E;
+}
+
+/* .accordion li.open i {
+ color: #b63b4d;
+ }
+ */
+
+/* Submenu */
+
+.submenu {
+    display: none;
+    background: #444359;
+    font-size: 14px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #4b4a5e;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 42px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+    background:#FA710E;
+    color: #fff;
+}
+
+<!-- (dont use php comment symbols here)
+
+Top Navigation:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
+-->
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav p {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.i {
+    color: white;
+}
+
+.topnav a.i:hover {
+    color:black;
+}
+
+.active {
+    background-color: #1287A2;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#previous {
+    padding: 8px 16px;
+    border-radius:50%;
+    display: inline;
+}
+
+#previous:hover {
+    background-color: #259fba;
+}
+
+.login {
+color: #4d4d4d;
+background-color:#fff;
+font-weight: 700;
+font-size: 14px;
+padding: 25px 50px 25px 25px;
+text-align:right;
+}
+
+/* Buttons design:
+https://tableau.github.io/extensions-api/docs/Style_Guidelines/ux_color.html */
+
+/* padding: top right bottom left */
+/*input[type=submit] replaced by .form_submit_button class to use work with :active
+and not to affect login submit button*/
+.form_submit_button {
+    padding:0.7em 1.4em;
+    margin-left:5px;
+    background:#EB4454;
+    color:white;
+    border:none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.form_submit_button:active {
+    background-color:#C93A47;
+}
+
+/*input[type=reset] replaced by .form_reset_button class to use with :active*/
+.form_reset_button {
+    padding:0.7em 1.4em;
+    margin-left:12px;
+    background:#BEBEBE;
+    border:none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.form_reset_button:active {
+    background-color:#666666;
+}
+
+.okcancel {
+    padding-bottom:10px; 
+    padding-left:100px;
+    margin-bottom:5px;
+    float:right;
+}
+
+.body_text {
+    background-color:#fbf9f6;
+    color: black;
+    padding: 25px;
+    font-size: 14px;
+}
+
+.body_text a {
+    color: blue;
+}
+
+fieldset {
+  padding: 10px;
+}
+
+fieldset > p {
+    padding-bottom: 5px;   
+}
+
+textarea {
+   padding:6px 12px;
+   font-size:14px;
+   line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;
+   font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+::placeholder {
+  /*padding:6px 12px;*/
+  font-size:14px;
+  font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}
+
+/* Customisation of CSS settings in http://jsfiddle.net/ZTs42/2/ 
+   Required to handle long strings in select options */
+.selectboxit-options .selectboxit-option .selectboxit-option-anchor {
+    white-space: normal;
+    height: auto;
+}
+
+/* Customisation of the .form-control class in https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css 
+A link to Bootstrap was not desired because it modifies automatically too many elements.
+
+The display and width properties are switch off but they control the bottom-after-input field spacing and length-of-input field spacing, respectively.  You may want to activate them later on.  
+https://www.w3schools.com/css/css_display_visibility.asp
+*/
+.my-form-control {/*display:block;*/height:34px;width:auto;/*width:100%;*/padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s}
