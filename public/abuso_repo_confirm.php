@@ -14,7 +14,7 @@ date_default_timezone_set( "America/Bogota" );
         <!-- En html "utf-8", "ISO-8859-1" es equivalente a utf8 y latin1 en mySQL --> <!-- visualiza tilde y ñ -->
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" type="text/css" href="./styles/main.css">
+        <link rel="stylesheet" type="text/css" href="./main.css">
     </head>
 <body>
 
