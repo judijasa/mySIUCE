@@ -4,11 +4,9 @@
 ## CREATE FILE: .htaccess
 ## https://stackoverflow.com/questions/5891365/mac-os-x-doesnt-allow-to-name-files-starting-with-a-dot-how-do-i-name-the-hta
 
-## THE FOLLOWING IS REQUIRED FOR PROTECTED FOLDERS
 # <Files MYFILE.html>  ## Uncomment to protect MYFILE.html instead of entire directory
 AuthUserFile /home/.../config//.htpasswd.XXXXXXXXXXXXXXXXX
 AuthName password_required
 AuthType Basic
 Require valid-user
 # </Files>  ## Uncomment to protect MYFILE.html instead of entire directory
-########END REQUIRE
