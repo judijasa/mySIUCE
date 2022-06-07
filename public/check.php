@@ -1,5 +1,5 @@
 <?php session_start();
-         require 'config/config.php'; // values of $servername, $dbname, $dbuser, $dbpass
+         require '../config/config.php'; // values of $servername, $dbname, $dbuser, $dbpass
          header('Content-Type: text/html; charset=ISO-8859-1'); // visualiza tilde y ñ
     
      /*
