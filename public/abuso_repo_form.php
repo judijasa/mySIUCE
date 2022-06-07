@@ -48,7 +48,7 @@
     <?php
     /*
         // mySQL Connect
-        require 'config/config.php'; // values of $servername, $dbname, $dbuser, $dbpass
+        require '../config/config.php'; // values of $servername, $dbname, $dbuser, $dbpass
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbuser, $dbpass);
             // set the PDO error mode to exception
